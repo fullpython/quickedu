@@ -1,4 +1,5 @@
-1. Create Cource, Teacher, Cycle, Student, Subscription, Materials
+1. Create Cource, Teacher, Cycle, Student, Subscription, Materials 
+++++++
     
 2. custom admin page template setup 
 3. crud for admin page [Cource, Teacher, Cycle, Student, Subscription,Blog]

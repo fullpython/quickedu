@@ -7,3 +7,4 @@ from .cycle import (
     Room
 )
 from .subscription import Subscription
+from .material import Material

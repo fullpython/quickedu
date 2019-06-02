@@ -7,7 +7,8 @@ from .models import (
     Cycle,
     Room,
     Student,
-    Subscription
+    Subscription,
+    Material
 )
 
 admin.site.register(Course)
@@ -20,3 +21,5 @@ class RoomAdmin(admin.ModelAdmin):
 admin.site.register(Room,RoomAdmin)
 
 admin.site.register(Subscription)
+
+admin.site.register(Material)

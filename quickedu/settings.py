@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # my apps
     'apps.pages',
     'apps.customadmin',
+    'apps.management',
 ]
 
 MIDDLEWARE = [

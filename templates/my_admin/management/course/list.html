@@ -1,13 +1,46 @@
 {% extends 'my_admin/base.html' %}
 
 
+{%block creat_button %}
+<a href='{%url "course_create" %}' class="btn pull-right hidden-sm-down btn-success">
+    <i class="mdi mdi-plus-circle"></i>
+    Create
+</a>
+{% endblock %}
+
+
+
 {% block content %}
+
 <div class='row'>
-    hhhhhhhhhhhhhhhhhhhhhhhhhhhh
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {% for object in object_list %}
+                            <tr>
+                                <td><a href="{% url 'course_detail' object.id %}">{{object.name}}</a></td>
+                                <td>{{object.description}}</td>
+
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
-    {% for object in object_list %}
-        <p>{{object.name}}</p>
-    {% endfor %}
+
 
 {% endblock %}

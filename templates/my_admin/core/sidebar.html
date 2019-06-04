@@ -1,23 +1,67 @@
-<!-- Sidebar -->
-<div class="sidebar-fixed position-fixed">
-
-    <a class="logo-wrapper waves-effect">
-      <img src="https://mdbootstrap.com/img/logo/mdb-email.png" class="img-fluid" alt="">
-    </a>
-
-    <div class="list-group list-group-flush">
-      <a href="#" class="list-group-item active waves-effect">
-        <i class="fas fa-chart-pie mr-3"></i>Dashboard
-      </a>
-      <a href="#" class="list-group-item list-group-item-action waves-effect">
-        <i class="fas fa-user mr-3"></i>Profile</a>
-      <a href="#" class="list-group-item list-group-item-action waves-effect">
-        <i class="fas fa-table mr-3"></i>Tables</a>
-      <a href="#" class="list-group-item list-group-item-action waves-effect">
-        <i class="fas fa-map mr-3"></i>Maps</a>
-      <a href="#" class="list-group-item list-group-item-action waves-effect">
-        <i class="fas fa-money-bill-alt mr-3"></i>Orders</a>
-    </div>
-
+{%load static%}
+<aside class="left-sidebar">
+  <!-- Sidebar scroll-->
+  <div class="scroll-sidebar">
+      
+      <!-- Sidebar navigation-->
+      <nav class="sidebar-nav">
+          <ul id="sidebarnav">
+              <li class="nav-small-cap">School</li>
+              <li>
+                  <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-bank"></i><span class="hide-menu">Manage School</span></a>
+                  <ul aria-expanded="false" class="collapse">
+                      <li><a href="{% url 'course_list' %}">Courses</a></li>
+                      <li><a href="index2.html">Room</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Statistics</span></a>
+                  <ul aria-expanded="false" class="collapse">
+                      <li><a href="app-calendar.html">Calendar</a></li>
+                      <li><a href="app-chat.html">Chat app</a></li>
+                      
+                  </ul>
+              </li>
+              
+              
+              <li class="nav-devider"></li>
+              <li class="nav-small-cap">Teachers & Students</li>
+              <li>
+                  <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-account-card-details"></i><span class="hide-menu">Teachers</span></a>
+                  <ul aria-expanded="false" class="collapse">
+                      
+                  </ul>
+              </li>
+              <li>
+                  <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Students</span></a>
+                  <ul aria-expanded="false" class="collapse">
+                     
+                      
+                  </ul>
+              </li>
+              
+              <li>
+                  <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Page Layout</span></a>
+                  <ul aria-expanded="false" class="collapse">
+                      <li><a href="layout-single-column.html">1 Column</a></li>
+                      <li><a href="layout-fix-header.html">Fix header</a></li>
+                      
+                  </ul>
+              </li>
+              
+             
+          </ul>
+      </nav>
+      <!-- End Sidebar navigation -->
   </div>
-  <!-- Sidebar -->
+  <!-- End Sidebar scroll-->
+  <!-- Bottom points-->
+  <div class="sidebar-footer">
+      <!-- item-->
+      <a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
+      <!-- item-->
+      <!-- item-->
+      <a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+  </div>
+  <!-- End Bottom points-->
+</aside>

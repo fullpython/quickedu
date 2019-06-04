@@ -1,2 +1,6 @@
 from .admin_page import AdminHomeView
-from .course import CourseListView
+from .course import (
+    CourseListView,
+    CourseCreateView,
+    CourseDetailView
+    )

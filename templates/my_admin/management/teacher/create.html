@@ -1,0 +1,25 @@
+{% extends 'my_admin/base.html' %}
+
+
+{% block content %}
+
+<form action="{% url 'teacher_create' %}" , method='post'>
+    {% csrf_token %}
+    {% for hidden in form.hidden_fields %}
+    {{ hidden }}
+    {% endfor %}
+    {# Include the visible fields #}
+    {% for field in form.visible_fields %}
+    <div class="fieldWrapper">
+        {{ field.errors }}
+        
+        <div class='row'>
+            <div class='col-3'>{{ field.label_tag }}</div>
+            <div class='col-6'>{{ field }}</div>
+        </div> 
+    </div>
+    {% endfor %}
+    <input class='btn btn-success' type="submit" value='Save'>
+</form>
+
+{% endblock %}

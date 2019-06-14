@@ -5,4 +5,12 @@ from .course import (
     CourseDetailView,
     CourseUpdateView,
     CourseDeleteView,
+
+    
     )
+
+from .teacher import (
+    TeacherListView,
+    TeacherCreateView,
+    
+)

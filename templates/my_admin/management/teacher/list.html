@@ -2,7 +2,7 @@
 
 
 {%block creat_button %}
-<a href='{%url "course_create" %}' class="btn pull-right hidden-sm-down btn-success">
+<a href='{%url "teacher_create" %}' class="btn pull-right hidden-sm-down btn-success">
     <i class="mdi mdi-plus-circle"></i>
     Create
 </a>
@@ -11,14 +11,7 @@
 
 
 {% block content %}
-<div class='row'>
-    <form method="get" action="{% url 'course_list'%}">
-        
-        <input type='text' name='name'>
-        <input type='submit' value="Search">
-    </form>
 
-</div>
 <div class='row'>
     <div class="col-12">
         <div class="card">
@@ -27,16 +20,16 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Course</th>
-                                <th>Description</th>
+                                <th>Name</th>
+                                <th>Teacheble Courses</th>
                             </tr>
                         </thead>
                         <tbody>
 
                             {% for object in object_list %}
                             <tr>
-                                <td><a href="{% url 'course_detail' object.id %}">{{object.name}}</a></td>
-                                <td>{{object.description}}</td>
+                                <td><a href="">{{object.first_name}} {{object.middle_name}} {{object.last_name}}</a></td>
+                                <td>{{object.id}}</td>
 
                             </tr>
                             {% endfor %}

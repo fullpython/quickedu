@@ -2,5 +2,16 @@
 
 
 {% block content %}
+<div class="row">
+    <div class="col-10">
+        <h1>{{object.name}}</h1>
+    </div>
+    <div class="col-2">
+        <a href="{% url 'course_update' object.id %}" class="btn btn-outline-primary ">Update</a>
+        <a href="{% url 'course_delete' object.id %}" class="btn btn-outline-danger ">Delete</a>
+    </div>
+
+</div>
+
 {{object.description}}
 {% endblock %}

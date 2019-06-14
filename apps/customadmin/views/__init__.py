@@ -2,5 +2,7 @@ from .admin_page import AdminHomeView
 from .course import (
     CourseListView,
     CourseCreateView,
-    CourseDetailView
+    CourseDetailView,
+    CourseUpdateView,
+    CourseDeleteView,
     )

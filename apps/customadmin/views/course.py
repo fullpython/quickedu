@@ -10,9 +10,16 @@ from django.views.generic.edit import (
 )
 from apps.management.models import Course
 from django.urls import reverse_lazy
+
+
 class CourseListView(ListView):
     model = Course
     template_name = 'my_admin/management/course/list.html'
+
+
+class CourseDetailView(DetailView):
+    model = Course
+    template_name = 'my_admin/management/course/detail.html'
 
 
 class CourseCreateView(CreateView):
@@ -22,6 +29,14 @@ class CourseCreateView(CreateView):
     fields = ['name','description']
 
 
-class CourseDetailView(DetailView):
+class CourseUpdateView(UpdateView):
     model = Course
-    template_name = 'my_admin/management/course/detail.html'
+    template_name = 'my_admin/management/course/update.html'
+    success_url = reverse_lazy('course_list')
+    fields = ['name','description']
+
+class CourseDeleteView(DeleteView):
+    model=Course
+    template_name = 'my_admin/management/course/delete.html'
+    success_url = reverse_lazy('course_list')
+    
